@@ -1,0 +1,431 @@
+/* Four Roots Ranch homepage prototype */
+
+:root {
+  --pine: #2D4F3C;
+  --teal: #41838C;
+  --clay: #E85D32;
+  --cream: #F7F1E7;
+  --soft-cream: #FBF8F1;
+  --sand: #C8A57E;
+  --bark: #3F352D;
+  --muted: #6F655B;
+  --white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(200, 165, 126, 0.18), transparent 28rem),
+    var(--soft-cream);
+  color: var(--bark);
+  font-family: "Open Sans", system-ui, sans-serif;
+  line-height: 1.65;
+}
+
+img {
+  max-width: 100%;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -10rem;
+  background: var(--pine);
+  color: var(--white);
+  padding: 0.75rem 1rem;
+  z-index: 10;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.site-header {
+  background: var(--cream);
+  border-bottom: 1px solid rgba(63, 53, 45, 0.14);
+  padding: 1.35rem clamp(1.25rem, 5vw, 4.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.brand {
+  color: var(--pine);
+  text-decoration: none;
+  display: grid;
+  gap: 0.15rem;
+}
+
+.brand-main {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  line-height: 1.1;
+}
+
+.brand-sub {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(0.9rem, 1.7vw, 1.45rem);
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: var(--bark);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: var(--teal);
+}
+
+.donate-link {
+  background: var(--clay);
+  color: var(--white) !important;
+  padding: 0.65rem 1.15rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.6rem 1.25rem rgba(232, 93, 50, 0.16);
+}
+
+.hero {
+  background: var(--cream);
+  padding: 0 clamp(0.75rem, 3vw, 2rem);
+}
+
+.hero-image {
+  width: 100%;
+  display: block;
+  max-height: 640px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0 0 1.8rem 1.8rem;
+}
+
+.intro-section {
+  padding: 0 clamp(1.25rem, 6vw, 5.75rem) 4.5rem;
+  margin-top: -3.25rem;
+  position: relative;
+  z-index: 2;
+}
+
+.intro-card {
+  max-width: 780px;
+  background: rgba(247, 241, 231, 0.97);
+  border: 1px solid rgba(200, 165, 126, 0.7);
+  box-shadow: 0 1.5rem 3.8rem rgba(63, 53, 45, 0.14);
+  padding: clamp(2rem, 5vw, 3.65rem);
+  border-radius: 1.35rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Libre Baskerville", Georgia, serif;
+  color: var(--pine);
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2.75rem, 7vw, 5.6rem);
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.045em;
+}
+
+h2 {
+  font-size: clamp(2.15rem, 4vw, 3.85rem);
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.035em;
+}
+
+h3 {
+  font-size: 1.32rem;
+  margin: 0 0 0.75rem;
+}
+
+p {
+  margin: 0 0 1.15rem;
+  font-size: 1.045rem;
+  max-width: 68ch;
+}
+
+.intro-card p {
+  font-size: clamp(1.15rem, 2vw, 1.38rem);
+}
+
+.intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.7rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.9rem;
+  padding: 0.78rem 1.25rem;
+  border-radius: 0.45rem;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.button:hover,
+.button:focus {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  background: var(--clay);
+  color: var(--white);
+  box-shadow: 0 0.7rem 1.4rem rgba(232, 93, 50, 0.16);
+}
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--pine);
+  border: 1px solid rgba(45, 79, 60, 0.32);
+}
+
+.story-section {
+  padding: 4.5rem clamp(1.25rem, 6vw, 5.75rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 28rem);
+  gap: clamp(2.25rem, 7vw, 5.75rem);
+  align-items: center;
+}
+
+.story-copy {
+  max-width: 48rem;
+}
+
+.tilted-photo {
+  margin: 0;
+  padding: 0.85rem;
+  background: var(--cream);
+  border: 1px solid rgba(200, 165, 126, 0.68);
+  box-shadow: 0 1.2rem 2.5rem rgba(63, 53, 45, 0.12);
+  transform: rotate(1.2deg);
+}
+
+.tilted-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.note-section {
+  padding: 1.5rem clamp(1.25rem, 6vw, 5.75rem) 3.75rem;
+}
+
+.note-card {
+  max-width: 62rem;
+  background: #EFE3D2;
+  border-left: 0.42rem solid var(--teal);
+  padding: clamp(2rem, 5vw, 3.35rem);
+}
+
+.note-card p {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(1.55rem, 3.1vw, 2.55rem);
+  line-height: 1.28;
+  color: var(--pine);
+  margin: 0;
+  max-width: 23ch;
+}
+
+.care-section {
+  padding: 4.5rem clamp(1.25rem, 6vw, 5.75rem);
+  background:
+    linear-gradient(90deg, rgba(65, 131, 140, 0.1), transparent 40%),
+    var(--cream);
+}
+
+.care-intro {
+  max-width: 54rem;
+  margin-bottom: 2.15rem;
+}
+
+.care-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.15rem;
+}
+
+.care-grid article {
+  background: rgba(255, 255, 255, 0.56);
+  border: 1px solid rgba(200, 165, 126, 0.58);
+  padding: clamp(1.45rem, 3vw, 2rem);
+  border-radius: 1.05rem;
+}
+
+.photo-break {
+  padding: 5rem clamp(1.25rem, 6vw, 5.75rem);
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(18rem, 0.72fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.photo-break img {
+  width: 100%;
+  max-height: 34rem;
+  object-fit: cover;
+  border-radius: 1.2rem;
+  box-shadow: 0 1.2rem 2.7rem rgba(63, 53, 45, 0.13);
+}
+
+.photo-break-copy {
+  background: var(--soft-cream);
+  border: 1px solid rgba(200, 165, 126, 0.62);
+  padding: clamp(2rem, 4vw, 3rem);
+  border-radius: 1.2rem;
+  margin-left: clamp(-5rem, -5vw, -2rem);
+  box-shadow: 0 1.3rem 3rem rgba(63, 53, 45, 0.12);
+}
+
+.photo-break-copy p {
+  font-size: 1.18rem;
+}
+
+.letter-section {
+  padding: 2rem clamp(1.25rem, 6vw, 5.75rem) 5.75rem;
+}
+
+.letter-card {
+  background:
+    linear-gradient(135deg, rgba(65, 131, 140, 0.2), transparent 45%),
+    var(--pine);
+  color: var(--cream);
+  padding: clamp(2.1rem, 6vw, 4.6rem);
+  border-radius: 1.6rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: end;
+}
+
+.letter-card h2 {
+  color: var(--cream);
+  max-width: 12ch;
+}
+
+.letter-card p {
+  font-size: 1.12rem;
+}
+
+.nonprofit-line {
+  color: rgba(247, 241, 231, 0.78);
+  font-size: 0.95rem !important;
+  margin-bottom: 0;
+}
+
+.light {
+  background: var(--cream);
+  color: var(--pine);
+  box-shadow: none;
+}
+
+.site-footer {
+  background: var(--cream);
+  border-top: 1px solid rgba(63, 53, 45, 0.14);
+  padding: 2rem clamp(1.25rem, 6vw, 5.75rem);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+@media (max-width: 920px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .main-nav {
+    justify-content: flex-start;
+  }
+
+  .story-section,
+  .care-grid,
+  .photo-break,
+  .letter-card {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-break-copy {
+    margin-left: 0;
+  }
+
+  .letter-card h2 {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    padding: 1.15rem;
+  }
+
+  .main-nav {
+    gap: 0.75rem 1rem;
+  }
+
+  .hero {
+    padding-inline: 0;
+  }
+
+  .hero-image {
+    border-radius: 0;
+    min-height: 22rem;
+  }
+
+  .intro-section {
+    margin-top: -1.7rem;
+    padding-bottom: 3rem;
+  }
+
+  .intro-card {
+    border-radius: 1rem;
+  }
+
+  h1 {
+    font-size: 2.65rem;
+  }
+
+  .story-section,
+  .care-section,
+  .photo-break {
+    padding-top: 3.25rem;
+    padding-bottom: 3.25rem;
+  }
+}
