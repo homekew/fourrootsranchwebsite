@@ -1,0 +1,189 @@
+/* Quieter editorial homepage refinements */
+
+.hero-image {
+  border-radius: 0;
+  max-height: 610px;
+}
+
+.quiet-intro {
+  margin-top: 0;
+  padding-top: 3.35rem;
+  padding-bottom: 3.6rem;
+}
+
+.quiet-intro .intro-card {
+  max-width: 760px;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+h1 {
+  font-size: clamp(2.05rem, 4.4vw, 3.75rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(1.65rem, 2.8vw, 2.45rem);
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1.12rem;
+  line-height: 1.25;
+}
+
+p,
+.intro-card p,
+.story-copy p,
+.care-intro p,
+.care-list p,
+.photo-break-copy p {
+  font-size: 1rem;
+}
+
+.intro-card p,
+.photo-break-copy p,
+.letter-card p {
+  font-size: 1.04rem;
+}
+
+.editorial-story {
+  padding-top: 3.75rem;
+  padding-bottom: 4.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.quiet-photo {
+  margin: 0;
+  background: var(--white);
+  border: 1px solid var(--soft-line);
+  box-shadow: none;
+  padding: 0.55rem;
+  transform: none;
+}
+
+.quiet-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.story-note {
+  margin-top: 1.6rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+  font-family: "Ovo", Georgia, serif;
+  font-size: clamp(1.18rem, 1.8vw, 1.55rem) !important;
+  line-height: 1.38;
+  max-width: 30ch;
+}
+
+.note-section {
+  display: none;
+}
+
+.editorial-care {
+  background: var(--off-white);
+  background-image: none;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(18rem, 0.9fr);
+  gap: clamp(2.25rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.care-intro {
+  max-width: 34rem;
+  margin: 0;
+}
+
+.care-list {
+  display: grid;
+  gap: 0;
+}
+
+.care-list article {
+  padding: 0 0 1.35rem;
+  border-bottom: 1px solid rgba(70, 70, 70, 0.16);
+}
+
+.care-list article + article {
+  padding-top: 1.35rem;
+}
+
+.care-list article:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.care-list h3 {
+  margin-bottom: 0.45rem;
+}
+
+.care-list p {
+  margin-bottom: 0;
+}
+
+.care-grid {
+  display: none;
+}
+
+.quiet-photo-break {
+  padding-top: 4.25rem;
+  padding-bottom: 4.25rem;
+  grid-template-columns: minmax(0, 0.95fr) minmax(18rem, 0.7fr);
+}
+
+.quiet-photo-break img {
+  border-radius: 0.35rem;
+  box-shadow: none;
+}
+
+.quiet-photo-break .photo-break-copy {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 0.35rem;
+  box-shadow: none;
+  margin-left: -3rem;
+}
+
+.restrained-giving {
+  padding-top: 0.75rem;
+}
+
+.restrained-giving .letter-card {
+  border-radius: 0.5rem;
+  padding: clamp(2rem, 5vw, 3.35rem);
+  box-shadow: none;
+}
+
+@media (max-width: 920px) {
+  .editorial-care {
+    grid-template-columns: 1fr;
+  }
+
+  .quiet-photo-break .photo-break-copy {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .quiet-intro {
+    padding-top: 2.35rem;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.65rem;
+  }
+}
