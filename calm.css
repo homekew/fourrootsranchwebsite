@@ -1,25 +1,28 @@
 /* Calm, polished Four Roots palette and typography refinements */
 
 :root {
-  --white: #ffffff;
-  --soft-cream: #f6f6f3;
-  --cream: #ffffff;
-  --slate: #43627f;
-  --rust: #9f5837;
-  --bark: #62605f;
-  --muted: #6f6d6b;
-  --pine: #43627f;
-  --teal: #43627f;
-  --clay: #9f5837;
-  --sand: #e8e6df;
-  --line: rgba(98, 96, 95, 0.12);
-  --soft-line: rgba(98, 96, 95, 0.16);
-  --quiet-shadow: 0 1rem 2.4rem rgba(98, 96, 95, 0.07);
+  --rust: #954F2E;
+  --slate: #3E5974;
+  --off-white: #F0F0EB;
+  --white: #FFFFFF;
+  --charcoal: #464646;
+
+  --soft-cream: #F0F0EB;
+  --cream: #FFFFFF;
+  --pine: #3E5974;
+  --teal: #3E5974;
+  --clay: #954F2E;
+  --bark: #464646;
+  --muted: rgba(70, 70, 70, 0.78);
+  --sand: #F0F0EB;
+  --line: rgba(70, 70, 70, 0.12);
+  --soft-line: rgba(70, 70, 70, 0.16);
+  --quiet-shadow: 0 1rem 2.4rem rgba(70, 70, 70, 0.07);
 }
 
 body {
   background: var(--white);
-  color: var(--bark);
+  color: var(--charcoal);
   font-family: "Alegreya Sans", system-ui, sans-serif;
   line-height: 1.62;
 }
@@ -36,7 +39,7 @@ h3,
 .note-card p {
   font-family: "Ovo", Georgia, serif;
   font-weight: 400;
-  color: var(--bark);
+  color: var(--charcoal);
 }
 
 .brand-sub,
@@ -56,7 +59,7 @@ h3,
 }
 
 .main-nav a {
-  color: var(--bark);
+  color: var(--charcoal);
   font-size: 0.98rem;
 }
 
@@ -75,7 +78,7 @@ h3,
 .button-secondary {
   background: transparent;
   color: var(--slate);
-  border-color: rgba(67, 98, 127, 0.32);
+  border-color: rgba(62, 89, 116, 0.32);
 }
 
 .hero,
@@ -84,7 +87,7 @@ h3,
 }
 
 .care-section {
-  background: var(--soft-cream);
+  background: var(--off-white);
 }
 
 .hero-image {
@@ -142,7 +145,7 @@ p,
 .care-intro p,
 .care-grid p,
 .photo-break-copy p {
-  color: var(--bark);
+  color: var(--charcoal);
   font-size: 1rem;
 }
 
@@ -170,12 +173,12 @@ p,
 }
 
 .note-card {
-  background: var(--soft-cream);
+  background: var(--off-white);
   border-left: 0.32rem solid var(--slate);
 }
 
 .note-card p {
-  color: var(--bark);
+  color: var(--charcoal);
 }
 
 .care-section {
