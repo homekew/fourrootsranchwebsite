@@ -1,0 +1,194 @@
+/* Calm, polished Four Roots palette and typography refinements */
+
+:root {
+  --white: #ffffff;
+  --soft-cream: #eeeeea;
+  --cream: #f7f6f1;
+  --slate: #43627f;
+  --rust: #9f5837;
+  --bark: #62605f;
+  --muted: #6f6d6b;
+  --pine: #43627f;
+  --teal: #43627f;
+  --clay: #9f5837;
+  --sand: #d8d3c7;
+  --line: rgba(98, 96, 95, 0.14);
+  --soft-line: rgba(98, 96, 95, 0.18);
+  --quiet-shadow: 0 1rem 2.5rem rgba(98, 96, 95, 0.08);
+}
+
+body {
+  background: var(--soft-cream);
+  color: var(--bark);
+  font-family: "Alegreya Sans", system-ui, sans-serif;
+  line-height: 1.68;
+}
+
+.site-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand-main,
+h1,
+h2,
+h3,
+.note-card p {
+  font-family: "Ovo", Georgia, serif;
+  font-weight: 400;
+  color: var(--bark);
+}
+
+.brand-sub,
+.main-nav a,
+.button {
+  font-family: "Alegreya Sans", system-ui, sans-serif;
+}
+
+.brand-sub {
+  color: var(--muted);
+  letter-spacing: 0.12em;
+}
+
+.main-nav a {
+  color: var(--bark);
+  font-size: 1.02rem;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: var(--slate);
+}
+
+.donate-link,
+.button-primary {
+  background: var(--rust);
+  color: var(--white) !important;
+  box-shadow: none;
+}
+
+.button-secondary {
+  background: transparent;
+  color: var(--slate);
+  border-color: rgba(67, 98, 127, 0.32);
+}
+
+.hero,
+.care-section,
+.site-footer {
+  background: var(--soft-cream);
+}
+
+.hero-image {
+  border-radius: 0 0 1.2rem 1.2rem;
+}
+
+.intro-section {
+  margin-top: -2.4rem;
+}
+
+.intro-card,
+.tilted-photo,
+.photo-break img,
+.photo-break-copy {
+  box-shadow: var(--quiet-shadow);
+}
+
+.intro-card,
+.care-grid article,
+.photo-break-copy {
+  background: var(--cream);
+  border: 1px solid var(--soft-line);
+}
+
+.intro-card {
+  border-radius: 1rem;
+}
+
+h1 {
+  font-size: clamp(2.6rem, 6.4vw, 5.1rem);
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  font-size: clamp(2rem, 3.8vw, 3.45rem);
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 1.36rem;
+}
+
+p,
+.intro-card p,
+.story-copy p,
+.care-intro p,
+.care-grid p,
+.photo-break-copy p {
+  color: var(--bark);
+  font-size: 1.08rem;
+}
+
+.intro-card p,
+.photo-break-copy p,
+.letter-card p {
+  font-size: 1.18rem;
+}
+
+.button,
+.donate-link {
+  border-radius: 0.32rem;
+}
+
+.tilted-photo {
+  transform: rotate(0.25deg);
+  border: 1px solid var(--soft-line);
+}
+
+.note-card {
+  background: var(--white);
+  border-left: 0.32rem solid var(--slate);
+}
+
+.note-card p {
+  color: var(--bark);
+}
+
+.care-section {
+  background-image: none;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.care-grid article {
+  border-radius: 0.8rem;
+}
+
+.photo-break-copy,
+.photo-break img,
+.letter-card {
+  border-radius: 1rem;
+}
+
+.letter-card {
+  background: var(--slate);
+  color: var(--white);
+}
+
+.letter-card h2,
+.letter-card p {
+  color: var(--white);
+}
+
+.nonprofit-line {
+  color: rgba(255, 255, 255, 0.74) !important;
+}
+
+.light {
+  background: var(--white);
+  color: var(--slate) !important;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+}
