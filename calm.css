@@ -2,8 +2,8 @@
 
 :root {
   --white: #ffffff;
-  --soft-cream: #eeeeea;
-  --cream: #f7f6f1;
+  --soft-cream: #f6f6f3;
+  --cream: #ffffff;
   --slate: #43627f;
   --rust: #9f5837;
   --bark: #62605f;
@@ -11,14 +11,14 @@
   --pine: #43627f;
   --teal: #43627f;
   --clay: #9f5837;
-  --sand: #d8d3c7;
-  --line: rgba(98, 96, 95, 0.14);
-  --soft-line: rgba(98, 96, 95, 0.18);
-  --quiet-shadow: 0 1rem 2.5rem rgba(98, 96, 95, 0.08);
+  --sand: #e8e6df;
+  --line: rgba(98, 96, 95, 0.12);
+  --soft-line: rgba(98, 96, 95, 0.16);
+  --quiet-shadow: 0 1rem 2.4rem rgba(98, 96, 95, 0.07);
 }
 
 body {
-  background: var(--soft-cream);
+  background: var(--white);
   color: var(--bark);
   font-family: "Alegreya Sans", system-ui, sans-serif;
   line-height: 1.68;
@@ -74,8 +74,11 @@ h3,
 }
 
 .hero,
-.care-section,
 .site-footer {
+  background: var(--white);
+}
+
+.care-section {
   background: var(--soft-cream);
 }
 
@@ -95,9 +98,13 @@ h3,
 }
 
 .intro-card,
-.care-grid article,
 .photo-break-copy {
-  background: var(--cream);
+  background: var(--white);
+  border: 1px solid var(--soft-line);
+}
+
+.care-grid article {
+  background: var(--white);
   border: 1px solid var(--soft-line);
 }
 
@@ -141,12 +148,13 @@ p,
 }
 
 .tilted-photo {
+  background: var(--white);
   transform: rotate(0.25deg);
   border: 1px solid var(--soft-line);
 }
 
 .note-card {
-  background: var(--white);
+  background: var(--soft-cream);
   border-left: 0.32rem solid var(--slate);
 }
 
